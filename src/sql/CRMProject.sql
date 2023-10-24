@@ -1,3 +1,7 @@
+create database crm_system
+use crm_system
+
+
 CREATE TABLE customer (
   id            varchar(16) NOT NULL, 
   full_name     varchar(64) NULL, 
@@ -108,6 +112,13 @@ CREATE TABLE pipeline_stage (
   stage_order int NULL, 
   PRIMARY KEY (pipeline_id, 
   stage_id));
+CREATE TABLE customer_marketing_campaign (
+  customer_id           varchar(16) NOT NULL, 
+  marketing_campaign_id varchar(16) NOT NULL, 
+  sent_date             date NULL, 
+  channel               varchar(64) NULL, 
+  PRIMARY KEY (customer_id, 
+  marketing_campaign_id));
 ALTER TABLE employee ADD CONSTRAINT [FK-sales_team-employee2] FOREIGN KEY (sales_team_id) REFERENCES sales_team (id);
 ALTER TABLE sales_team ADD CONSTRAINT [FK-employee-sales_team2] FOREIGN KEY (team_leader_id) REFERENCES employee (id);
 ALTER TABLE [order] ADD CONSTRAINT [FK-customer-order2] FOREIGN KEY (customer_id) REFERENCES customer (id);
@@ -126,3 +137,5 @@ ALTER TABLE lead_oppurtunity ADD CONSTRAINT [FK-marketing_campaign-lead_oppurtun
 ALTER TABLE pipeline_stage ADD CONSTRAINT [FK-pipeline-pipeline_stage] FOREIGN KEY (pipeline_id) REFERENCES pipeline (id);
 ALTER TABLE pipeline_stage ADD CONSTRAINT [FK-stage-pipeline_stage] FOREIGN KEY (stage_id) REFERENCES stage (id);
 ALTER TABLE [order] ADD CONSTRAINT [FK-lead_status-order2] FOREIGN KEY (lead_status_id) REFERENCES lead_status (id);
+ALTER TABLE customer_marketing_campaign ADD CONSTRAINT [FK-customer-customer_marketing_campaign] FOREIGN KEY (customer_id) REFERENCES customer (id);
+ALTER TABLE customer_marketing_campaign ADD CONSTRAINT [FK-marketing_campaign-customer_marketing_campaign] FOREIGN KEY (marketing_campaign_id) REFERENCES marketing_campaign (id);
