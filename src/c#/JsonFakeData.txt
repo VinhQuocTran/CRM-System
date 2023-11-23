@@ -1,0 +1,63 @@
+Json insert orderitem
+{
+    "Id": "ORI001",
+    "Quantity": 2,
+    "DiscountPercent": 10,
+    "OrderId": "ORD001",
+    "ProductId": "PRO001"
+}
+
+
+Json update stage
+{
+    "Id": "LOP004",
+    "Name": "Opportunity for CUS004",
+    "Urgency": 3,
+    "ExpectedRevenue": 34000,
+    "ExpectedClosingDate": "2023-12-06T17:16:40",
+    "CreateDate": null,
+    "SourceId": "SOU001",
+    "CreateEmployeeId": "EMP004",
+    "MarketingCampaignId": "MAR001"
+}
+
+
+Json check condition update stage
+{
+    "Id": "LOP001",
+    "Name": "Opportunity 1 for CUS001",
+    "Urgency": 3,
+    "ExpectedRevenue": 5000,
+    "ExpectedClosingDate": null,
+    "CreateDate": null,
+    "SourceId": "SOU001",
+    "CreateEmployeeId": "EMP003",
+    "MarketingCampaignId": "MAR001"
+}
+
+
+Json insert lead oppurtunity
+{
+    "Id": "IdAutoGenerate",
+    "Name": "Opportunity for CUS004",
+    "Urgency": 5,
+    "ExpectedRevenue": 34000,
+    "ExpectedClosingDate": "2023-12-06T17:16:40",
+    "CreateDate": null,
+    "SourceId": "SOU001",
+    "CreateEmployeeId": "EMP004",
+    "MarketingCampaignId": "MAR001"
+}
+
+employee not have sale team
+{
+    "Id": "IdAutoGenerate",
+    "Name": "Opportunity for CUS003",
+    "Urgency": 4,
+    "ExpectedRevenue": 4000,
+    "ExpectedClosingDate": "2023-12-15T17:16:40",
+    "CreateDate": null,
+    "SourceId": "SOU001",
+    "CreateEmployeeId": "EMP006",
+    "MarketingCampaignId": "MAR001"
+}
